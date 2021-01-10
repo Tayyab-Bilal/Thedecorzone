@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            h1 { color: brown;}
+            #para2 { color: darkgoldenrod;}
+            #para1 {
+                border: 2px solid black;
+                padding: 30px;
+                margin-top: 30px;
+            }
+            body{
+                /*background-image: url(https://blog.hubspot.com/hs-fs/hubfs/image8-2.jpg?width=600&name=image8-2.jpg);
+                */background-repeat: no-repeat;
+                background-size:cover;
+                background-attachment:fixed;
+                background-color: rgb(53, 54, 54);
+            }
+            table,th,td{
+                border: 2px solid black;
+                border-collapse: collapse;
+                border-spacing: 10px;
+            }
+            td{
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: center;
+            }
+            td,th{
+                padding: 15px;
+            }
+            #list{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333333;
+            }
+            #li a{
+                display: block;
+                text-align: center;
+                color: white;
+                padding: 16px;
+                text-decoration: none;
+            }
+            blockquote{
+                height:100px;
+            }
+            header{
+                background-color: #666;
+                padding: 30px;
+                text-align: center;
+                font-size: 35px;
+                color: white;
+            }
+            nav{
+                float: left;
+                width: 30%;
+                background: #ccc;
+                padding: 20px;
+                height: 300px; /* only for demonstration, should be removed */
+            }
+            nav ul{
+                list-style: none;
+                padding: 0;
+            }
+            article {
+                float: right;
+                padding: 20px;
+                width: 70%;
+                background-color: #f1f1f1;
+                height: 300px; /* only for demonstration, should be removed */
+            }
+            @media (max-width: 600px) {
+                nav, article {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            section:after {
+            content: "";
+            display: table;
+            clear: both;
+            }
+            .flex-container {
+            display: flex;
+            flex-wrap: nowrap;
+            background-color: DodgerBlue;
+            }
+
+            .flex-container > div {
+            background-color: #f1f1f1;
+            width: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 75px;
+            font-size: 30px;
+            }
+
+        </style>
+    </head> 
+
+
+<body onload="get_height()" > 
+    <h2>
+        CSS layout
+    </h2>
+
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>  
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>  
+        <div>7</div>
+        <div>8</div>
+    </div>
+    <p>
+        ek piyara sa &nbsp;&nbsp;&nbsp; para <!yeh randikhana hai??>
+    </p>
+    <p>
+        ek aur para sa         para
+    </p>
+    <header>
+        <h2>Cities</h2>
+    </header>
+
+    <section>
+        <nav id="testka" >
+            <ul id="tteet">
+                <li><a href="https://web.whatsapp.com">web</a></li>
+                <li><a href="https://www.bullshit.com">bullshit</a></li>
+            </ul>
+        </nav>
+        <article>
+            gus a chuss article
+        </article>
+    </section>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+
+    <ul id="list">
+        <li id="li"><a href="https://www.google.com">Google</a></li>
+        <li id="li"><a href="https://www.youtube.com">Youtube</a></li>
+        <li id="li"><a href="https://www.ffmovies.ru/home">Movies</a></li>
+        <li id="li"><a href="https://www.Facebook.com">Facebook</a></li>
+    </ul>
+
+
+    <! target=
+        _blank	The response is displayed in a new window or tab
+        _self	The response is displayed in the current window
+        _parent	The response is displayed in the parent frame
+        _top	The response is displayed in the full body of the window
+        framename	The response is displayed in a named iframe
+
+        other attributes 
+        accept-charset	Specifies the character encodings used for form submission
+        action	Specifies where to send the form-data when a form is submitted
+        autocomplete	Specifies whether a form should have autocomplete on or off
+        enctype	Specifies how the form-data should be encoded when submitting it to the server (only for method="post")
+        method	Specifies the HTTP method to use when sending form-data
+        name	Specifies the name of the form
+        novalidate	Specifies that the form should not be validated when submitted
+        rel	Specifies the relationship between a linked resource and the current document
+        target	Specifies where to display the response that is received after submitting the form
+    
+    >
+    <!form action="/action_page.php" method="post" keeps data in > 
+    <!form action="/action_page.php" method="get" keeps data in url>
+
+    <form action="chuss()" autocomplete="on" target="_blank">
+
+        <fieldset>
+            <legend> chuss</legend>
+            <! adding novalidate after action tells that theres no need to validate the contents>
+            <label for="fname">First name:</label>
+                <input type="text" id="fname" name="fname"><br><br>
+            <label for="email">Email:</label>
+                <input type="text" id="email" name="email">
+            <br><br>
+        </fieldset>
+
+        <! Check boxes phele input phir label>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I have a boat</label>
+        <br><br>
+
+
+        <! radio buttons phele input phir label>
+            <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+            <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+        <br><br>
+
+        <! drop down list>
+        <label for="cars">Choose a car:</label>
+            <select id="cars" name="cars" multiple >
+                <option value="volvo">Volvo</option>
+                <option value="saab" selected>Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+            </select>
+        <br><br>
+
+
+        <textarea name="message" style="width:200px; height:600px;">
+            The cat was playing in the garden.
+        </textarea>
+        <br><br>
+
+        <input list="browsers">
+        <datalist id="browsers">
+          <option value="Internet Explorer">
+          <option value="Firefox">
+          <option value="Chrome">
+          <option value="Opera">
+          <option value="Safari">
+        </datalist>
+        
+        <br><br>
+        oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        0
+        <input type="range"  id="a" name="a" value="50">
+        100 +
+        <input type="number" id="b" name="b" value="50">
+        =
+        <output name="x" for="a b"></output>
+        <br><br>
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <script>
+        function chuss()
+        {
+            print("kutta");
+        }
+    </script>
+
+    <dl style="margin-block-start: 0;">
+        <dt>Coffee</dt>
+        <dd>black hot drink</dd>
+        <dd>black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+      </dl>
+      <ol style="list-style:circle;">
+              <li>idk 1</li>
+              <li>idk 2</li>
+              <li>idk 3</li>
+      </ol>
+      <ul style="list-style:circle;">
+              <li>idk 1</li>
+              <li>idk 2</li>
+              <li>idk 3</li>
+      </ul>
+      <ul style="list-style:circle;">
+              <li> tests
+                  <ul>
+                    <li>test 1</li>
+                    <li>test 2</li>
+                    <li>test 3</li>
+                  </ul>
+              </li>
+              <li>idk 2</li>
+              <li>idk 3</li>
+      
+        </ul>
+        <ol>
+            <li>Coffee</li>
+            <li>Tea
+              <ol>
+                <li>Black tea</li>
+                <li>Green tea</li>
+              </ol>
+            </li>
+            <li>Milk</li>
+          </ol>
+
+
+    <div style="text-align: center;">test</div>
+
+
+
+    <h1 style="font-size: 40px;text-align: center;">My First Heading</h1>
+
+    <p style="color:red;" title="I'm a tooltip"  dir="rtl">
+        My first paragraph.
+    </p>
+    <a href="https://www.google.com" target="_blank"><img src="https://blog.hubspot.com/hs-fs/hubfs/image8-2.jpg?width=600&name=image8-2.jpg" width=20% height=10% alt="test">
+    </a>
+    <br>
+    <hr>
+    <button onclick="window.open('https://www.google.com','_blank')">this</button>
+    <button onclick="open_google()" title="go to googlaaaa">this</button>
+    <a id="link1" href="https://www.google.com" target="_blank" > NEXT </a> 
+    <!href can also have id using #>
+    <script>
+        function open_google(){
+            //document.location='https://www.google.com';
+            window.open("https://www.google.com","_blank")
+
+        }
+    </script>
+    <pre id="para2">This paragraph contains a lot of spaces in the source code, but the browser ignores it.</pre>
+
+
+    <table style="width:100%">
+        <caption>Monthly savings</caption>
+        <tr>
+        <th>Month</th>
+        <th>Savings</th>
+        </tr>
+        <tr>
+        <td>January</td>
+        <td>$100</td>
+        </tr>
+        <tr>
+        <td>February</td>
+        <td>$50</td>
+        </tr>
+    </table>
+
+    <p  id="para1">
+
+        <i>
+            test
+        </i>
+        test
+    </p>
+
+    <figure >
+        <picture>
+            <source media="(min-width: 650px)" srcset="https://blog.hubspot.com/hs-fs/hubfs/image8-2.jpg?width=600&name=image8-2.jpg">
+            <img src="https://i.ytimg.com/vi/7PXLPzcIydw/hqdefault.jpg">
+        </picture>
+        <figcaption>this a fig cap</figcaption>
+    </figure>
+
+    <!img id="cine" src="qw.png" style="height: 80%;width: 80%;" usemap="#work">
+
+
+    <!iframe src="https://portal.ucp.edu.pk" title="tinoda tinoda tinoda tinoda boom boom"> <!/iframe>
+
+
+    <map name="work">
+        <area target="_blank" href="https://www.google.com"  coords="1007,393,1107,738" shape="rect">
+    </map>
+    <img id="image"  src="https://blog.hubspot.com/hs-fs/hubfs/image8-2.jpg?width=600&name=image8-2.jpg", style="float: left;height: 100%;width: 50%;">
+
+    <blockquote id="some"  title="lets seeee" cite="https://www.dummies.com/web-design-development/site-development/how-to-use-multiple-styles-together-with-css3/">
+        Understanding the rules of inheritance in CSS3 helps you create interesting sites that require a minimum of maintenance.
+            By following these rules, 
+            when maintenance is required, you normally have to make just one change, rather than changing hundreds of items individually.
+    </blockquote>
+
+    <script>
+        function get_height(){
+            var image=document.querySelector("#image");
+            var heeight=image.clientHeight;
+            var block=document.querySelector("#some");
+            block.style.height=heeight.toString(10)+"px";
+            window.print();
+        }
+    </script>
+    <q  >
+        We dont give a ___ anymore
+
+    </q>
+
+    <abbr title="I DONT GIVE A FUCK">
+    IDGAF
+    </abbr>
+
+    <address>
+        SUPPOSED TO BE.<br>
+        SOME Address<br>
+        not workin<br>
+    </address>
+
+    <p><cite>The ___</cite> by everyone</p>
+
+    <bdo dir="rtl" style="border: 1px solid black;">
+        eromyna ____ a evig tnod eW 
+    </bdo>
+    <footer>
+        <p>Author: T Boy
+        <a href="mailto:Tayyaib055766@gmail.com">Tayyaib055766@gmail.com</a></p>
+    </footer>
+</body>
+</html>
